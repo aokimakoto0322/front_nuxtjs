@@ -49,7 +49,7 @@ input {
   text-align: center;
   outline: none;
   margin: 10px;
-  width: 30%;
+  width: 50%;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
