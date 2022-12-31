@@ -18,7 +18,7 @@
         <br />
         <input type="password" name="password" id="password" placeholder="P@$$W0RD" :style="input"/>
         <br />
-        <input type="button" value="login" class="button" id="done" :style="inputStyle"/>
+        <input type="button" value="login" class="button" id="login" :style="inputStyle"/>
         <br />
       </div>
       <div v-else-if="show == '2'" class="tabcontent-list">
@@ -26,7 +26,7 @@
         <br />
         <input type="password" name="password" id="password" placeholder="P@$$W0RD" :style="input"/>
         <br />
-        <input type="button" value="Register" class="button" id="done" :style="inputStyle"/>
+        <input type="button" value="Register" class="button" id="register" :style="inputStyle"/>
         <br />
       </div>
     </div>
@@ -108,12 +108,10 @@ input:hover {
 input:active {
   box-shadow: 0px 0px 8px -5px #000000;
 }
-#done {
-  background: lightgreen;
-}
 .button {
   cursor: pointer;
   user-select: none;
+  background: lightgreen;
 }
 img {
   height: 2.2rem;
