@@ -14,19 +14,19 @@
 
     <div class="tabcontent">
       <div v-if="show == '1'" class="tabcontent-list">
-        <input type="text" name="username" id="username" placeholder="User Name" :style="input"/>
+        <input type="text" name="username" id="username" placeholder="User Name" v-model="form.username"/>
         <br />
-        <input type="password" name="password" id="password" placeholder="P@$$W0RD" :style="input"/>
+        <input type="password" name="password" id="password" placeholder="P@$$W0RD" v-model="form.password"/>
         <br />
-        <input type="button" value="login" class="button" id="login" :style="inputStyle"/>
+        <input type="button" @click="login()" value="login" class="button" id="login"/>
         <br />
       </div>
       <div v-else-if="show == '2'" class="tabcontent-list">
-        <input type="text" name="username" id="username" placeholder="User Name" :style="input"/>
+        <input type="text" name="username" id="username" placeholder="User Name" v-model="form.password"/>
         <br />
-        <input type="password" name="password" id="password" placeholder="P@$$W0RD" :style="input"/>
+        <input type="password" name="password" id="password" placeholder="P@$$W0RD" v-model="form.password"/>
         <br />
-        <input type="button" value="Register" class="button" id="register" :style="inputStyle"/>
+        <input type="button" @click="register()" value="Register" class="button" id="register"/>
         <br />
       </div>
     </div>
@@ -44,8 +44,24 @@ export default {
   data() {
     return {
       show: "1",
+      form: {
+        username: '',
+        password: ''
+      },
     }
   },
+  methods: {
+    login() {
+      console.log("login")
+      console.log(this.form.username)
+      console.log(this.form.password)
+    },
+    register() {
+      console.log("register")
+      console.log(this.form.username)
+      console.log(this.form.password)
+    }
+  }
 };
 </script>
 
