@@ -55,6 +55,7 @@ export default {
       console.log("login")
       console.log(this.form.username)
       console.log(this.form.password)
+      console.log(this.$config.apiURL)
     },
     register() {
       console.log("register")

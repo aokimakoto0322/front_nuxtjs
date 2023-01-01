@@ -44,5 +44,8 @@ export default {
     webpack: {
         poll: true
     }
+  },
+  publicRuntimeConfig: {
+    apiURL: process.env.URL_API
   }
 }
