@@ -52,10 +52,22 @@ export default {
   },
   methods: {
     login() {
+      var loginData = {
+        "username": this.form.username,
+        "password": this.form.password
+      }
+
       console.log("login")
       console.log(this.form.username)
       console.log(this.form.password)
       console.log(this.$config.apiURL)
+      this.$axios.post(this.$config.apiURL + "/login", loginData)
+        .then(res => {
+          //成功
+        })
+        .catch(err => {
+          //失敗
+        })
     },
     register() {
       console.log("register")
