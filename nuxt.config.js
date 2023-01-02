@@ -33,6 +33,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    "@nuxtjs/axios",
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -43,5 +44,8 @@ export default {
     webpack: {
         poll: true
     }
+  },
+  publicRuntimeConfig: {
+    apiURL: process.env.URL_API
   }
 }
